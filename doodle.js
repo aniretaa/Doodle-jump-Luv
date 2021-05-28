@@ -217,7 +217,7 @@ function main() {
 		this.isSpring = Math.random() < 0.2;
 		// монстры
 		if (!this.isSpring && score > 1500){
-			this.isMonster = Math.random() < 0.5;
+			this.isMonster = Math.random() < 0.3;
 		}
 		if (!this.isSpring && score > 3000){
 			this.isMonster = Math.random() < 0.5;
@@ -254,7 +254,10 @@ function main() {
 		}
 		// черные дыры
 		if (!this.isMonster && !this.isSpring && score>3000){
-			this.isHole = Math.random()<0.5;
+			this.isHole = Math.random()<0.1;
+		}
+		if (!this.isMonster && !this.isSpring && score>5000){
+			this.isHole = Math.random()<0.3;
 		}
 		if (!this.isMonster && !this.isSpring && score>8000){
 			this.isHole = Math.random()<0.5;
